@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML INPUTS TYPES</title>
+<style>
+label{
+  padding:5px;
+    font-size:18px;
+    display:table-row;
+    color:brown;
+    font-weight:bold;
+}
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top:20px;
+}
+input[type=text]{
+  padding: 10px;
+  border-radius: 3px;
+  height: 6px;
+  border-color: #000;
+}
+input[type=text]:focus {
+    width: 90%;
+    border-color:green;
+    background: lightblue;
+    color: white;
+}
+</style>
+</head>
+<body>
+<h4>HTML INPUTS TYPES</h4>
+  <form action="#" method="post">
+  <label>Name  </label><input type="text" name="name" id="nameId"><br/><br/>
+  <label>Email  </label><input type="email" name="email"><br/><br/>
+  <label>Number</label><input type="number" name="number"><br/><br/>
+  <label>Text Area</label>  
+     <textarea>
+     </textarea><br/>
+  <label>Range</label><input type="range" name="range"><br/><br/>
+  <label>Radio </label>male<input type="radio" name="sex" value="male">
+    female<input type="radio" name="sex" value="female">
+      other<input type="radio" name="sex" value="other"><br/><br/>
+  <label>Check Box</label>
+    <input type="checkbox" name="java">java
+      <input type="checkbox" name="C-language">C-language
+      <input type="checkbox" name="PHP">PHP
+      <input type="checkbox" name="HTML">HTML<br/><br/>
+  <label>DropDown</label>    
+  State  <select>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Maharashtra">Maharashtra</option>
+        </select><br/><br/>
+   <label>File</label>   
+   Upload <input type="file" name="file_upload"><br/><br/>
+   <label>Date</label>  
+   <input type="date" name="date" /><br/><br/>
+   <label>Date with Local Time</label>  
+   <input type="datetime-local" name="datetime"/> <br/><br/>
+  <label>Color Picker</label>  
+   <input type="color" name="color"/> <br/><br/>
+  <label>Search</label>  
+   <input type="search" name="color"/> <br/><br/>    
+  <label>Meter</label>  
+  <meter min="1" max="100" value="50"></meter> <br/><br/>    
+       
+  <dl>
+    <dt>Name</dt>
+        <dd>Sivashankar</dd>
+          <dd>Siva</dd>
+          <dd>shankar</dd>
+          <dd>Ss</dd>    
+  </dl>
+
+  <details>
+    <summary>Click Me</summary>
+      <p>Thanks for clicking...</p>
+  </details>
+  <input type="submit" value="Submit" onclick="myLoadComplete()" />
+  </form>
+  <script>
+function showDiv() {
+    var x = document.getElementById('myDIV');
+    if (x.style.visibility === 'hidden') {
+        x.style.visibility = 'visible';
+    } else {
+        x.style.visibility = 'hidden';
+    }
+}
+</script>
+<button id="showDivClick" onclick="showDiv()">Show Form Values</button>
+<div id="myDIV" style="visibility: hidden;">
+Name is : ${nameId}
+</div>
+</body>
+</html>
